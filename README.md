@@ -29,7 +29,6 @@
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- JS
 
 ### What I learned
 
