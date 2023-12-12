@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+  /* ### Primary */
+  --color-1: hsl(0, 100%, 67%);
+  --color-2: hsl(39, 100%, 56%);
+  --color-3: hsl(166, 100%, 37%);
+  --color-4: hsl(234, 85%, 45%);
+  /* ## Gradients */
+  --color-5: hsl(252, 100%, 67%);
+  --color-6: hsl(241, 81%, 54%);
+  --color-7: hsla(256, 72%, 46%, 1);
+  --color-8: hsla(241, 72%, 46%, 0);
+  /* ### Neutral */
+  --color-9: hsl(0, 0%, 100%);
+  --color-10: hsl(221, 100%, 96%);
+  --color-11: hsl(241, 100%, 89%);
+  --color-12: hsl(224, 30%, 27%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1.8rem;
+  background-color: var(--color-10);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 73rem;
+  height: 51rem;
+  background-color: var(--color-9);
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.1);
+  border-radius: 3rem;
+
+  display: flex;
+}
+
+.result-box {
+  width: 50%;
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  border-radius: 3rem;
+  padding: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.summary-box {
+  flex: 1;
+  padding: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: var(--color-11);
+  font-weight: 700;
+}
+
+.result {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.res {
+  font-size: 8rem;
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
+  color: var(--color-9);
+}
+
+.total-res {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--color-11);
+}
+
+.heading-2 {
+  font-size: 3rem;
+  color: var(--color-9);
+}
+
+.paragraph {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-11);
+  text-align: center;
+}
+
+.summary {
+  font-size: 2.2rem;
+  color: var(--color-12);
+}
+
+.res-box {
+  height: 5rem;
+  width: 100%;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  border-radius: 1rem;
+  padding: 0 1.5rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.res-box:last-of-type {
+  margin: 0;
+}
+
+.res-1 {
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.res-2 {
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.res-3 {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.res-4 {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.res-1 .title {
+  color: hsl(39, 100%, 56%);
+}
+
+.res-2 .title {
+  color: hsl(0, 100%, 67%);
+}
+
+.res-3 .title {
+  color: hsl(166, 100%, 37%);
+}
+
+.res-4 .title {
+  color: hsl(234, 85%, 45%);
+}
+
+.icn {
+  margin-right: 1rem;
+}
+
+.title {
+  font-size: 1.8rem;
+}
+
+.score {
+  text-align: end;
+  flex: 1;
+  font-weight: 700;
+  color: #9c9a9d;
+}
+
+.score span {
+  color: #303749;
+}
+
+.btn {
+  height: 5rem;
+  width: 100%;
+  background-color: var(--color-12);
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  color: var(--color-9);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+}
+
+@media (max-width: 730px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .result-box {
+    height: 45vh;
+    width: 100%;
+    border-radius: 0 0 3rem 3rem;
+    padding: 3.5rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .result {
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .res {
+    font-size: 6rem;
+  }
+
+  .heading-2 {
+    font-size: 2rem;
+  }
+
+  .paragraph {
+    font-size: 1.8rem;
+  }
+
+  .summary-box {
+    padding: 3rem;
+  }
+
+  .summary {
+    font-size: 2rem;
+  }
+}
